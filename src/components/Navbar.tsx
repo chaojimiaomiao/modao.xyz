@@ -103,7 +103,7 @@ export function Navbar() {
 
           {/* 用户登录 Link */}
           <a
-            href="https://gf484fh7bb.coze.site/chat"
+            href="./cozechat.html"
             target="_blank"
             rel="noopener noreferrer"
             className="relative text-sm font-medium transition-colors duration-300 text-[#a0a0b0] hover:text-[#00f2ff]"
@@ -183,7 +183,7 @@ export function Navbar() {
             );
           })}
           <a
-            href="https://gf484fh7bb.coze.site/chat"
+            href="./cozechat.html"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setMobileOpen(false)}

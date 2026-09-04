@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coze Web SDK</title>
+    <style>
+      * { box-sizing: border-box;}
+      html { margin: 0; height: 100%; }
+      body { margin: 0; padding: 8px; height: 100%; }
+    </style>
+  </head>
+  <body>
+    <script src="https://lf-cdn.coze.cn/obj/unpkg/latest/coze/web-sdk/dist/js-umd/index.min.js"></script>
+    <script>
+      // 初始化 Web SDK。
+      cozeWebSDK.init({
+        // 替换为你的项目 ID，用于指定要加载的智能体或工作流。
+        projectId: '7681183902462902299',
+        // 替换为 Token。作为初始化时的访问凭证，用于首次加载 Web SDK 时完成身份验证。
+        refreshToken: () => Promise.resolve("pat_dWs1Xag4y9N6usDvXCEVQBc61vi8abAltlDBZ4DBBc37hX7LasaCCblfoXe4NMXj"),
+      });
+    </script>
+  </body>
+</html>
