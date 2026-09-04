@@ -10,7 +10,6 @@ const navItems: NavItem[] = [
   { label: '核心科技', href: '#core-tech' },
   { label: '互动实验室', href: '#lab' },
   { label: '灵魂游戏', to: '/soul-game' },
-  { label: '用户故事', href: '#stories' },
 ];
 
 export function Navbar() {
@@ -102,6 +101,17 @@ export function Navbar() {
             );
           })}
 
+          {/* 用户登录 Link */}
+          <a
+            href="https://gf484fh7bb.coze.site/chat"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative text-sm font-medium transition-colors duration-300 text-[#a0a0b0] hover:text-[#00f2ff]"
+            style={{ fontFamily: 'var(--font-chinese)' }}
+          >
+            用户登录
+          </a>
+
           {/* 灵魂游戏 Link */}
           <Link
             to="/agents"
@@ -172,6 +182,16 @@ export function Navbar() {
               </button>
             );
           })}
+          <a
+            href="https://gf484fh7bb.coze.site/chat"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMobileOpen(false)}
+            className="text-2xl text-[#f0f0f5] hover:text-[#00f2ff] transition-colors"
+            style={{ fontFamily: 'var(--font-chinese)' }}
+          >
+            用户登录
+          </a>
           <Link
             to="/agents"
             onClick={() => setMobileOpen(false)}
