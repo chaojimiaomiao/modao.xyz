@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dreamcore Airlines · 登船口</title>
+    <style>
+      * { box-sizing: border-box; }
+      html { margin: 0; height: 100%; }
+      body {
+        margin: 0; padding: 8px; height: 100%;
+        display: flex; flex-direction: column;
+        background: #070d1f;
+      }
+      /* 让 SDK 注入的聊天窗口自动填满暗号横幅以下的剩余空间 */
+      body > *:not(#boarding-gate):not(script) { flex: 1 1 auto; min-height: 0; }
+      #boarding-gate {
+        flex: 0 0 auto;
+        margin: 0 0 8px;
+        padding: 13px 16px 11px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, #0b1e3f 0%, #1a3468 52%, #0b1e3f 100%);
+        border: 1px solid rgba(245, 215, 110, 0.45);
+        box-shadow: 0 0 22px rgba(96, 148, 255, 0.28), inset 0 0 30px rgba(10, 25, 60, 0.6);
+        color: #f5d76e;
+        font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      #boarding-gate::before, #boarding-gate::after {
+        content: "✦";
+        position: absolute;
+        color: rgba(245, 215, 110, 0.5);
+        font-size: 12px;
+      }
+      #boarding-gate::before { top: 8px; left: 14px; }
+      #boarding-gate::after { bottom: 8px; right: 14px; }
+      .bg-title { font-size: 11px; letter-spacing: 5px; color: rgba(245, 215, 110, 0.55); }
+      .bg-line1 { margin-top: 6px; font-size: 21px; letter-spacing: 6px; text-shadow: 0 0 12px rgba(245, 215, 110, 0.35); }
+      .bg-line2 { margin-top: 7px; font-size: 16px; letter-spacing: 1.5px; color: #e9efff; }
+      .bg-line2 b { color: #f5d76e; font-weight: 600; }
+      .bg-hint { margin-top: 7px; font-size: 11px; letter-spacing: 1px; color: rgba(233, 239, 255, 0.42); }
+    </style>
+  </head>
+  <body>
+    <div id="boarding-gate">
+      <div class="bg-title">DREAMCORE AIRLINES · 航班 MO-2026</div>
+      <div class="bg-line1">你来了啊。</div>
+      <div class="bg-line2">这趟夜航不验票，只对暗号——<b>船票编号是？</b></div>
+      <div class="bg-hint">编号印在你船票 NO. 后面那一串 · 地球人管它叫订单号</div>
+    </div>
+    <script src="https://lf-cdn.coze.cn/obj/unpkg/latest/coze/web-sdk/dist/js-umd/index.min.js"></script>
+    <script>
+      // 初始化 Web SDK。
+      cozeWebSDK.init({
+        // 替换为你的项目 ID，用于指定要加载的智能体或工作流。
+        projectId: '7681183902462902299',
+        // 替换为 Token。作为初始化时的访问凭证，用于首次加载 Web SDK 时完成身份验证。
+        refreshToken: () => Promise.resolve("pat_dWs1Xag4y9N6usDvXCEVQBc61vi8abAltlDBZ4DBBc37hX7LasaCCblfoXe4NMXj"),
+      });
+    </script>
+  </body>
+</html>
