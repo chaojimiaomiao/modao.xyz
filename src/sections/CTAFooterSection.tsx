@@ -72,7 +72,7 @@ export function CTAFooterSection() {
           </p>
           <span
             className="cta-animate btn-liquid-pink text-lg py-4 px-12 neon-pulse-pink inline-block text-center cursor-pointer"
-            onClick={() => { alert('请添加微信node_tech定制服务'); window.open('https://store.weixin.qq.com/shop/a/upJ0s3y6KFxh6zk', '_blank'); }}
+            onClick={() => { alert('请添加微信node_tech定制服务'); window.open('https://store.weixin.qq.com/shop/a/VoFTtAZaJbtvjUD', '_blank'); }}
             role="button"
             tabIndex={0}
           >
